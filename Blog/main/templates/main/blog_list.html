@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Blog </h2>
+<br>
+
+<button><a href="/formaNoviBlog">Stvori novi blog post</a></button>
+
+{% for blog in blog_list %}
+    <div class="blog">
+        <h4>{{ blog.theme }}</h4>
+        <p>Datum : {{blog.date}}</p>
+        <p>Vrijeme: {{blog.time}}</p>
+        <p>Komentar: <br/>{% for comment in blog.comment.all %}{{ comment }}<br/>{% endfor %}</p>
+    </div>
+{% endfor %}
+{% endblock %}

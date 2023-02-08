@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Blog</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users">Korisnik</a></li>
+            <li><a href="/reputations">Reputacija</a></li>
+            <li><a href="/comments">Komentar</a></li>            
+            <li><a href="/blogs">Blog</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <button><a href="/register">Registracija</a></button>
+    <button><a href="/login">Prijava</a></button>
+
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

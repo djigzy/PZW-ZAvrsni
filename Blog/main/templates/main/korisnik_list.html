@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Korisnici </h2>
+<br>
+
+<button><a href="/formaNoviKorisnik">Stvori novog korisnika</a></button>
+
+{% for korisnik in korisnik_list %}
+    <div class="korisnik">
+        <h4>{{ korisnik.name }}</h4>
+        <p>Korisnicko ime: {{korisnik.user_name}}</p>
+        <p>Email: {{korisnik.email}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

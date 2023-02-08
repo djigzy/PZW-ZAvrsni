@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Komentari </h2>
+<br>
+
+<button><a href="/formaNoviKomentar">Stvori novi komentar</a></button>
+
+{% for komentar in komentar_list %}
+    <div class="komentar">
+        <h4>{{ komentar.user_name }}</h4>
+        <p>Komentar: {{komentar.comment}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<br>
+<h2> Reputacija </h2>
+<br>
+
+<button><a href="/formaNovaReputacija">Stvori novu reputaciju</a></button>
+
+{% for reputacija in reputacija_list %}
+    <div class="reputacija">
+        <h4>{{ reputacija.user_name }}</h4>
+        <p>Reputacijski bodovi: {{reputacija.points}}</p>
+    </div>
+{% endfor %}
+{% endblock %}
